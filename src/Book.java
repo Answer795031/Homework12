@@ -2,7 +2,7 @@ public class Book {
     // класс для описания книги
 
     private String bookName; // название книги
-    Author author;
+    private Author author;
     private int year; // год публикации
 
     public Book(String bookName, Author author, int year){
