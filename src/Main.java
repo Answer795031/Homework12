@@ -2,23 +2,26 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Author LevTolstoy = new Author("Лев", "Толстой");
-        Book WarAndPeace = new Book("Война и мир", 1867);
+        // создаем объекты levTolstoy и warAndPeace
+        Author levTolstoy = new Author("Лев", "Толстой");
+        Book warAndPeace = new Book("Война и мир", levTolstoy, 1867);
 
-        Author JoanneRowling = new Author("Джоан", "Роулинг");
-        Book HarryPotter = new Book("Гарри Поттер и философский камень", 1997);
+        // создаем объекты joanneRowling и harryPotter
+        Author joanneRowling = new Author("Джоан", "Роулинг");
+        Book harryPotter = new Book("Гарри Поттер и философский камень", joanneRowling, 1997);
         // Вызов методов
 
-        System.out.println("\nКнига: \"" + WarAndPeace.getBookName() + "\"\nГод публикации: " + WarAndPeace.getYear());
-        System.out.println("Автор: " + LevTolstoy.getAuthorName() + " " + LevTolstoy.getAuthorSurname());
+        System.out.println("\nКнига: \"" + warAndPeace.getBookName() + "\"\nГод публикации: " + warAndPeace.getYear()
+                            + "\nАвтор: " + warAndPeace.getAuthor());
 
-        System.out.println("\nКнига: \"" + HarryPotter.getBookName() + "\"\nГод публикации: " + HarryPotter.getYear());
-        System.out.println("Автор: " + JoanneRowling.getAuthorName() + " " + JoanneRowling.getAuthorSurname());
+        System.out.println("\nКнига: \"" + harryPotter.getBookName() + "\"\nГод публикации: " + harryPotter.getYear()
+                            + "\nАвтор: " + harryPotter.getAuthor());
 
-        HarryPotter.setYear(2000);
+        harryPotter.setYear(2000);
         // изменяем год публикации (Марти Макфлай, перестань баловаться) с помощью сеттера
 
-        System.out.println("\nКнига: \"" + HarryPotter.getBookName() + "\". Год публикации: " + HarryPotter.getYear());
+        System.out.println("\nКнига: \"" + harryPotter.getBookName() + "\"\nГод публикации: " + harryPotter.getYear()
+                + "\nАвтор: " + harryPotter.getAuthor());
 
     }
 }

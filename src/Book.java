@@ -2,13 +2,13 @@ public class Book {
     // класс для описания книги
 
     private String bookName; // название книги
-    Author author;                                              // -------------
+    Author author;
     private int year; // год публикации
 
     public Book(String bookName, Author author, int year){
         this.bookName = bookName;
         this.year = year;
-        this.author = author;                                   // как сделать!!!
+        this.author = author;
     }
 
     public String getBookName(){
@@ -19,6 +19,16 @@ public class Book {
     public void setBookName(String bookName){
         // сеттер для названия книги
         this.bookName = bookName;
+    }
+
+    public Author getAuthor(){
+        // геттер для автора
+        return this.author;
+    }
+
+    public void setAuthor(Author author){
+        // сеттер для автора
+        this.author = author;
     }
 
     public int getYear(){

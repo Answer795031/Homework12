@@ -4,6 +4,13 @@ public class Author {
     private String authorName; // имя автора
     private String authorSurname; // фамилия автора
 
+    @Override
+    public String toString() {
+        // переопределение метода toString для корректного вывода данных об авторе
+
+        return getAuthorName() + " " + getAuthorSurname();
+    }
+
     public Author(String authorName, String authorSurname){
         this.authorName = authorName;
         this.authorSurname = authorSurname;
